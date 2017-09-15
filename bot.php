@@ -16,8 +16,12 @@ if (!is_null($events['events'])) {
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
-			// Build message to reply back
-			$messages = [
+      // Build message to reply back
+      if (strpos($text, 'วันที่') !== false) {
+          $text = date('Y/m/d H:i:s');
+      }
+      
+      $messages = [
 				'type' => 'text',
 				'text' => $text
 			];
