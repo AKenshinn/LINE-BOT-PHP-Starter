@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 
       // Build message to reply back
       if (strpos($text, 'วันที่') !== false) {
-          $text = date('d/m/Y').' ไง ปฏิทินไม่มีหรอ (unamused)';
+          $text = date('d/m/Y').' ไง ปฏิทินไม่มีหรอ...';
       }
       
       $messages = [
